@@ -19,7 +19,7 @@ before_install:
 
 # Pre-testing installs
 install:
-  - docker-compose -f docker-compose.yml build --parallel
+  - docker-compose -f docker-compose-build.yml build --parallel
   - docker-compose up
 
 # Tasks to perform after the process is successful. Formatting the Docker username and password as below enables you to programmatically log in without having the password exposed in logs.
