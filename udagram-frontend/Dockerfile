@@ -10,11 +10,10 @@ COPY package*.json ./
 
 # Install dependencies
 RUN npm install
-RUN npm install -g ionic
-
 
 # Copy app source
 COPY . .
+RUN npm install -g ionic
 RUN ionic build
 
 # Bind the port that the image will run on

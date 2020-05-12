@@ -8,3 +8,7 @@ services:
     build:
       context: ./udagram-api/udagram-api-feed
     image: hmisonne/udagram-feed
+  udagram-frontend:
+    build:
+      context: ./udagram-frontend
+    image: hmisonne/udagram-frontend
