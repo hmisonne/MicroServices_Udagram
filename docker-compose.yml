@@ -3,8 +3,8 @@ services:
   udagram-user:
     image: hmisonne/udagram-user
     build:
-      context: ../udagram-api/udagram-user
+      context: ./udagram-api/udagram-api-user
   udagram-feed:
     image: hmisonne/udagram-feed
     build:
-      context: ../udagram-api/udagram-feed
+      context: ./udagram-api/udagram-api-feed
