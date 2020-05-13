@@ -1,6 +1,6 @@
 version: '3'
 services:
   udagram-user:
-    build: ./udagram-api/udagram-api-user
+    image: hmisonne/udagram-user
   udagram-feed:
-    build: ./udagram-api/udagram-api-feed
+    image: hmisonne/udagram-feed
