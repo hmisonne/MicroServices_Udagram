@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  udagram-user:
+    build:
+      context: ./udagram-api/udagram-api-user
+      dockerfile: Dockerfile
+  udagram-feed:
+    build:
+      context: ./udagram-api/udagram-api-feed
+      dockerfile: Dockerfile

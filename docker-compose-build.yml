@@ -1,6 +1,0 @@
-version: '3'
-services:
-  udagram-user:
-    image: hmisonne/udagram-user
-  udagram-feed:
-    image: hmisonne/udagram-feed
