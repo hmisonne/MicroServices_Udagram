@@ -13,7 +13,7 @@ RUN npm install
 
 # Copy app source
 COPY . .
-RUN npm install -g ionic
+RUN npm install -g @ionic/cli
 RUN ionic build
 
 # Bind the port that the image will run on
