@@ -1,0 +1,12 @@
+version: '3'
+services:
+  udagram-user:
+    build:
+      context: ./udagram-api/udagram-api-user
+      dockerfile: Dockerfile
+    image: hmisonne/udagram-user
+  udagram-feed:
+    build:
+      context: ./udagram-api/udagram-api-feed
+      dockerfile: Dockerfile
+    image: hmisonne/udagram-feed
