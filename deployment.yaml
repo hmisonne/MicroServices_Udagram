@@ -23,7 +23,3 @@ spec:
         image: hmisonne/udagram-feed
         ports:
         - containerPort: 80
-      - name: udagram-frontend
-        image: hmisonne/udagram-frontend
-        ports:
-        - containerPort: 80
