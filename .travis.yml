@@ -24,4 +24,3 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push hmisonne/udagram-user
   - docker push hmisonne/udagram-feed
-  - docker push hmisonne/udagram-frontend
