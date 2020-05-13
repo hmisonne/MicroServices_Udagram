@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: udagram
+  name: udagram-user
   labels:
-    app: udagram
+    app: udagram-user
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: udagram
+      app: udagram-user
   template:
     metadata:
       labels:
-        app: udagram
+        app: udagram-user
     spec:
       containers:
       - name: udagram-user
         image: hmisonne/udagram-user
         ports:
-        - containerPort: 80
+        - containerPort: 8080
