@@ -12,7 +12,9 @@ services:
     image: hmisonne/udagram-user
   udagram-feed:
     image: hmisonne/udagram-feed
-  udagram-frontend:
-    image: hmisonne/udagram-frontend
     volumes:
       - $HOME/.aws:/root/.aws
+  udagram-frontend:
+    image: hmisonne/udagram-frontend
+    ports:
+      - "8100:80"
