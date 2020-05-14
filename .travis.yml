@@ -23,4 +23,3 @@ after_success:
   - docker push hmisonne/udagram-user
   - docker push hmisonne/udagram-feed
   - docker push hmisonne/udagram-reverseproxy
-  - docker push hmisonne/udagram-frontend
