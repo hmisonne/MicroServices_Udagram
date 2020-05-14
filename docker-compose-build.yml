@@ -10,3 +10,8 @@ services:
       context: ./udagram-api/udagram-api-feed
       dockerfile: Dockerfile
     image: hmisonne/udagram-feed
+  udagram-reverseproxy:
+    build:
+      context: ./deployment
+      dockerfile: Dockerfile
+    image: hmisonne/udagram-reverseproxy
