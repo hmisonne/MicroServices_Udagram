@@ -1,28 +1,15 @@
 language: minimal
-
-services:
-  - docker
-env:
-  - DOCKER_COMPOSE_VERSION=1.4.2
-
-
+services: docker
+env: 
+    - DOCKER_COMPOSE_VERSION=1.23.2
 before_install:
-  # Docker Compose Install 
-  - docker -v && docker-compose -v
-  - sudo rm /usr/local/bin/docker-compose
-  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
-  - chmod +x docker-compose
-  - sudo mv docker-compose /usr/local/bin
-
-
-# Pre-testing installs
-before_script:
-  - docker-compose up -d --build
-
-after_script:
-  - docker-compose down
-
-after_success:
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push hmisonne/udagram-user
-  - docker push hmisonne/udagram-feed
+    - docker -v && docker-compose -v
+    - sudo rm /usr/local/bin/docker-compose
+    - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
+    - chmod +x docker-compose
+    - sudo mv docker-compose /usr/local/bin
+    - curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+    - chmod +x ./kubectl
+    - sudo mv ./kubectl /usr/local/bin/kubectl
+install: 
+    - docker-compose -f docker-compose-build.yaml build --parallel 
