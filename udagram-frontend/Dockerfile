@@ -1,5 +1,5 @@
 # Use NodeJS base image TBD
-FROM node:13
+FROM agileek/ionic-framework AS ionic
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -13,8 +13,7 @@ RUN npm install
 
 # Copy app source
 COPY . .
-RUN npm install -g @ionic/cli
-RUN ionic buildgit
+RUN ionic build
 
 # Bind the port that the image will run on
 EXPOSE 8080
