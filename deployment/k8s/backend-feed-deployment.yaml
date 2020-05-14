@@ -4,13 +4,16 @@ metadata:
   name: udagram-feed
   labels:
     service: udagram-feed
-  name: backend-feed
+  name: udagram-feed
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      service: udagram-feed
   template:
     metadata:
       labels:
-        app: udagram-feed
+        service: udagram-feed
     spec:
       containers:
       - name: udagram-feed

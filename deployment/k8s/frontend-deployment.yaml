@@ -6,6 +6,9 @@ metadata:
     service: udagram
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      service: udagram
   template:
     metadata:
       labels:
