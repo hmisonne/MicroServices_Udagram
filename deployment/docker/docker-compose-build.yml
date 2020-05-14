@@ -7,7 +7,7 @@ services:
     image: hmisonne/udagram-user
   udagram-feed:
     build:
-      context: ../../udagram-api/udagram-api-feed
+      context: ../../udagram-api-feed
       dockerfile: Dockerfile
     image: hmisonne/udagram-feed
   udagram-reverseproxy:
