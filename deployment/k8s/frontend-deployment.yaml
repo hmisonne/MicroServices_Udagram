@@ -3,19 +3,26 @@ kind: Deployment
 metadata:
   name: udagram
   labels:
-    app: udagram
+    service: udagram
 spec:
   replicas: 1
-  selector:
-    matchLabels:
-      app: udagram
   template:
     metadata:
       labels:
-        app: udagram
+        service: udagram
+        api: external
     spec:
       containers:
       - name: udagram-frontend
         image: hmisonne/udagram-frontend
+        imagePullPolicy: Always 
         ports:
         - containerPort: 80
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "1024Mi"
+            cpu: "500m"                
+      restartPolicy: Always
