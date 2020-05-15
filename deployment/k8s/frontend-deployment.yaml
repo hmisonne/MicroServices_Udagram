@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: udagram
+  name: udagram-frontend
   labels:
-    service: udagram
+    service: udagram-frontend
 spec:
   replicas: 2
   selector:
     matchLabels:
-      service: udagram
+      service: udagram-frontend
   template:
     metadata:
       labels:
-        service: udagram
+        service: udagram-frontend
         api: external
     spec:
       containers:
