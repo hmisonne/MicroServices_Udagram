@@ -1,5 +1,5 @@
 # Use NodeJS base image TBD
-FROM agileek/ionic-framework AS ionic
+FROM beevelop/ionic AS ionic
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -14,6 +14,7 @@ RUN npm ci
 # Copy app source
 COPY . .
 RUN ionic build
+
 
 ## Run 
 FROM nginx:alpine
