@@ -4,7 +4,6 @@ metadata:
   name: udagram-user
   labels:
     service: udagram-user
-  name: udagram-user
 spec:
   ports:
   - name: "8080"

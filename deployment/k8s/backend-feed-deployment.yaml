@@ -4,7 +4,6 @@ metadata:
   name: udagram-feed
   labels:
     service: udagram-feed
-  name: udagram-feed
 spec:
   replicas: 1
   selector:
