@@ -5,9 +5,9 @@ data:
   AWS_PROFILE: default
   AWS_REGION: us-west-1
   JWT_SECRET: hello
-  POSTGRESS_DB: postgres
-  POSTGRESS_HOST: cdr.ccffce8cbcx2.us-west-1.rds.amazonaws.com
+  POSTGRES_DB: postgres
+  POSTGRES_HOST: cdr.ccffce8cbcx2.us-west-1.rds.amazonaws.com
   URL: http://a218bf21f08964f9dabd85fd2a11587a-423112248.us-west-2.elb.amazonaws.com/
-  POSTGRESS_USERNAME: helene
+  POSTGRES_USERNAME: helene
 metadata:
   name: env-config
