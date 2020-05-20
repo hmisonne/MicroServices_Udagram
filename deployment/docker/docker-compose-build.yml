@@ -15,7 +15,7 @@ services:
       context: .
       dockerfile: Dockerfile
     image: hmisonne/reverseproxy
-  frontend:
+  udagram-frontend:
     build:
       context: ../../udagram-frontend  
     image: hmisonne/udagram-frontend
