@@ -1,7 +1,7 @@
 version: "3"
 services:
   reverseproxy:
-      image: hmisonne/udagram-reverseproxy
+      image: hmisonne/reverseproxy
       ports:
           - 8080:8080
       restart: always
