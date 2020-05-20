@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: udagram-feed
-        image: hmisonne/udagram-feed
+        image: hmisonne/udagram-feed:latest
         resources:
           requests:
             memory: "64Mi"
