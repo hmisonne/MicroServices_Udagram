@@ -49,7 +49,7 @@ spec:
         - name: POSTGRES_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: env-secret
+              name: env-config
               key: POSTGRES_PASSWORD
         - name: POSTGRES_USERNAME
           valueFrom:

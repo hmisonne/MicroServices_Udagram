@@ -3,11 +3,12 @@ kind: ConfigMap
 data:
   AWS_BUCKET: test-376262390406-dev
   AWS_PROFILE: default
-  AWS_REGION: us-west-1
+  AWS_REGION: us-east-1
+  POSTGRES_USERNAME: chirperadmin
+  POSTGRES_PASSWORD: postgres
+  POSTGRES_HOST: wyr.cfjeibujcbd0.us-east-1.rds.amazonaws.com
+  POSTGRES_DB: chirperdb
   JWT_SECRET: hello
-  POSTGRES_DB: postgres
-  POSTGRES_HOST: cdr.ccffce8cbcx2.us-west-1.rds.amazonaws.com
-  URL: http://a218bf21f08964f9dabd85fd2a11587a-423112248.us-west-2.elb.amazonaws.com/
-  POSTGRES_USERNAME: helene
+  URL: http://localhost:8100
 metadata:
   name: env-config
