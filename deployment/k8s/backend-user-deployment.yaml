@@ -48,7 +48,7 @@ spec:
               key: POSTGRES_HOST
         - name: POSTGRES_PASSWORD
           valueFrom:
-            secretKeyRef:
+            configMapKeyRef:
               name: env-config
               key: POSTGRES_PASSWORD
         - name: POSTGRES_USERNAME
